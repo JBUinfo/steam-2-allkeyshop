@@ -1,0 +1,38 @@
+version: 2
+
+project_name: s2a
+
+builds:
+  - id: cross-build-linux-darwin
+    main: "./cmd/main.go"
+    binary: s2a
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+
+  - id: cross-build-windows
+    main: "./cmd/main.go"
+    binary: s2a
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - windows
+
+checksum:
+  name_template: "{{ .ProjectName }}_checksums.txt"
+
+source:
+  enabled: false
+
+release:
+  github:
+    owner: JBUinfo
+    name: steam-2-allkeyshop
+
+archives:
+  - id: raw-binary
+    format: binary
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    wrap_in_directory: false

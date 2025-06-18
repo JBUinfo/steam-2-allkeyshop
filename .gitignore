@@ -1,0 +1,8 @@
+*.exe
+.env
+aks.json
+steam.json
+
+# IDE files #
+.vscode
+.idea
