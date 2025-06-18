@@ -6,7 +6,9 @@ Import your Steam wishlist to Allkeyshop
 2. Open a terminal, go to the project folder and execute:
 
    `go build -o s2a ./cmd/main.go`
+   
    or
+   
    `go build -o s2a.exe ./cmd/main.go`
 
 # Install
