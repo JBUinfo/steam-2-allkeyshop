@@ -22,7 +22,7 @@ This is because the Steam and Allkeyshop names do not match or, Allkeyshop has n
 The failed games have been stored in the `aks.json` file in the `notYet` property.
 If you have changed any file names or Allkeyshop has updated its list of games, you can re-run the program without reloading the Steam list:
 
-    `s2a wishlist import -f`
+    s2a wishlist import -f
 
 # Result
 You will have most of the games loaded in your wishlist list in your allkeyshop account.
